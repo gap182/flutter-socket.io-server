@@ -27,6 +27,15 @@
             console.log('Esuchando', payload)
         });
 
+        socket.on('nuevo-mensaje', function(payload){
+            console.log('Esuchando el nuevo mensaje', payload);
+        })
+
+        socket.on('active-bands', function(payload){
+            console.clear();
+            console.table (payload);
+        })
+
 
     </script>
 </body>
